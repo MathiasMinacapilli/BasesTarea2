@@ -6,9 +6,8 @@ FROM autores a
 	natural join obra_autor oa
 	natural join obras o
 	natural join obra_editorial oe
-	natural join editoriales e
 group by a.cod_autor, oa.cod_obra
-having count(distinct e.cod_editorial) > 1
+having count(distinct oe.cod_editorial) > 1
 /*
 (SELECT count(distinct edi.cod_editorial)
 	FROM autores aut
@@ -20,5 +19,6 @@ having count(distinct e.cod_editorial) > 1
 	group by obr.cod_obra
 	) > 1
 */
+--podemos sacar el editoriales pues el codigo editorial esta en obra_editorial
 
 --290ypico
