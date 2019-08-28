@@ -1,0 +1,20 @@
+﻿INSERT INTO public.proyectos (cod_proyecto, nombre_proyecto) 
+VALUES (1, 'TProgTarea1');
+
+INSERT INTO public.proyectos (cod_proyecto, nombre_proyecto) 
+VALUES (2, 'RedesTarea2');
+
+INSERT INTO public.empleados (cod_empleado, nombre_empleado, edad_empleado) 
+VALUES (1, 'Carolinda', 21);
+
+INSERT INTO public.empleados (cod_empleado, nombre_empleado, edad_empleado)
+VALUES (2, 'Mathias', 20);
+
+INSERT INTO public.proyecto_empleado (cod_proyecto, cod_empleado)
+VALUES (1, 1);
+
+INSERT INTO public.proyecto_empleado (cod_proyecto, cod_empleado)
+VALUES (1, 2);
+
+INSERT INTO public.proyecto_empleado (cod_proyecto, cod_empleado)
+VALUES (2, 1);

@@ -1,0 +1,7 @@
+﻿SELECT cod_proyecto as "Codigo proyecto",
+	--cod_empleado,
+	count(*) as "Cantidad empleados por proyecto"
+FROM empleados e
+	natural join proyectos p
+	natural join proyecto_empleado p_e
+group by p.cod_proyecto--, e.cod_empleado
