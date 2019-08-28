@@ -1,4 +1,4 @@
---Devolver el nombre de los autores que editaron todas sus 
+﻿--Devolver el nombre de los autores que editaron todas sus 
 --obras en mas de una editorial.
 
 SELECT a.nombre_autor
