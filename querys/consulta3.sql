@@ -20,3 +20,5 @@ having count(distinct e.cod_editorial) > 1
 	group by obr.cod_obra
 	) > 1
 */
+
+--290ypico
