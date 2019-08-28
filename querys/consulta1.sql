@@ -1,6 +1,10 @@
 ﻿--Devolver el título, edicion y cantidad de temas de 
 --las obras de Uruguay que tratan como máximo 3 temas
 
+--No se puede resolver ni en algebra ni en calculo
+--porque no tenemos funciones de agregacion
+--en ninguna de las dos
+
 --Al hacer el group by por codigo obra tenemos en cada
 --grupo las obras con el mismo codigo pero distintos temas.
 --Entonces al hacer el count de la cantidad de tuplas en
