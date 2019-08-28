@@ -1,0 +1,21 @@
+﻿
+CREATE TABLE public.proyectos (
+	cod_proyecto integer NOT NULL primary key,
+	nombre_proyecto character varying(150)
+);
+
+CREATE TABLE public.empleados (
+	cod_empleado integer NOT NULL primary key,
+	nombre_empleado character varying(150),
+	edad_empleado integer NOT NULL
+);
+
+CREATE TABLE public.proyecto_empleado (
+	cod_proyecto integer NOT NULL,
+	cod_empleado integer NOT NULL,
+	FOREIGN KEY (cod_proyecto) REFERENCES proyectos (cod_proyecto),
+	FOREIGN KEY (cod_empleado) REFERENCES empleados (cod_empleado)
+);
+
+
+
