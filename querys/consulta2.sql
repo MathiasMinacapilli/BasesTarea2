@@ -21,3 +21,5 @@ where f.cod_funcion = 1
 --having max(f.cod_funcion) = 1 --cod_funcion 1 es el codigo de la funcion de autor
 
 --El resultado es 1037
+
+--Chequear casos en los que puede haber repetidos, ordenar lexicograficamente
