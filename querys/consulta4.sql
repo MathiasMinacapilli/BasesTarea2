@@ -1,5 +1,5 @@
 ﻿--Devolver título e isbn de las obras que tienen mayor cantidad de editoriales que de autores.
-SELECT o.cod_obra, o.titulo, o.isbn
+SELECT o.titulo, o.isbn
 FROM obras o 
 	natural join obra_editorial oe
 	natural join obra_autor oa
