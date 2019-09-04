@@ -6,13 +6,6 @@ SELECT distinct a.cod_autor,
 FROM autores a
 	natural join obra_autor oa
 
-
-where oa.cod_funcion = 1
-	and not exists (SELECT a.cod_autor
-		FROM autores aut
-			natural join obra_autor oaut
-		where oaut.cod_funcion != 1
-
 where 'autor' in (SELECT distinct func.funcion 
 		FROM autores auts 
 			natural join obra_autor oaut 
