@@ -6,13 +6,17 @@ SELECT distinct a.cod_autor,
 FROM autores a
 	natural join obra_autor oa
 
-where oa.cod_funcion = 1
-	and not exists (SELECT a.cod_autor
+where --oa.cod_funcion = 1 and  // esto es lo mismo que poner el existe del final
+	 not exists (SELECT a.cod_autor
 		FROM autores aut
 			natural join obra_autor oaut
 		where oaut.cod_funcion != 1
 			and aut.cod_autor = a.cod_autor
 	)
+	and exists (SELECT 1
+		FROM autores auts
+			natural join obra_autor obraauts
+		where auts.cod_autor = a.cod_autor)
 	--and a.nombre_autor like '%Ercole%'
 --group by a.cod_autor
 
