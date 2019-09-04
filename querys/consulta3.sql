@@ -4,7 +4,6 @@
 SELECT distinct a.nombre_autor
 FROM autores a
 	natural join obra_autor oa
-	natural join obras o
 	natural join obra_editorial oe
 group by a.cod_autor, oa.cod_obra
 having count(distinct oe.cod_editorial) > 1
@@ -21,4 +20,4 @@ having count(distinct oe.cod_editorial) > 1
 */
 --podemos sacar el editoriales pues el codigo editorial esta en obra_editorial
 
---290ypico
+--300
