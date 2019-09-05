@@ -7,12 +7,9 @@ FROM inventario i
 	natural join obra_tema ot
 
 GROUP BY ot.cod_tema, i.cod_forma_ingreso
-having count(i.cod_obra
-	)>1
+having count(i.cod_obra) > 1
 
 order by "Cant obras" desc
-
-
 
 --un count en el select, y hay que agrupar por tema y forma de ingresa
 
