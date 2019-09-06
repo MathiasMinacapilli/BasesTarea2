@@ -10,7 +10,7 @@ where --oa.cod_funcion = 1 and  // esto es lo mismo que poner el existe del fina
 	 not exists (SELECT a.cod_autor
 		FROM autores aut
 			natural join obra_autor oaut
-		where oaut.cod_funcion != 1
+		where oaut.cod_funcion <> 1
 			and aut.cod_autor = a.cod_autor
 	)
 	and exists (SELECT 1
