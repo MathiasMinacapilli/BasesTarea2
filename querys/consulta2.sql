@@ -6,26 +6,17 @@ SELECT distinct a.cod_autor,
 FROM autores a
 	natural join obra_autor oa
 
-where oa.cod_funcion = 1
-	and not exists (SELECT distinct a.cod_autor
+where --oa.cod_funcion = 1 and  // esto es lo mismo que poner el existe del final
+	 not exists (SELECT a.cod_autor
 		FROM autores aut
 			natural join obra_autor oaut
-		where 'autor' not in (SELECT distinct func.funcion 
-				FROM autores auts 
-					natural join obra_autor oaut 
-					natural join funciones func 
-				where aut.cod_autor=a.cod_autor)
+		where oaut.cod_funcion <> 1
 			and aut.cod_autor = a.cod_autor
 	)
-	and 'autor' in (SELECT distinct func.funcion 
+	and exists (SELECT 1
 		FROM autores auts
-			natural join funciones func
-			natural join obra_autor obraut
-		where auts.cod_autor=a.cod_autor)
+			natural join obra_autor obraauts
+		where auts.cod_autor = a.cod_autor)
 
---Me fijo que el autor tenga al menos una obra en la que es autor, y luego me fijo que no exista ninguna otra en la que no sea autor. 
-
---Chequear casos en los que puede haber repetidos, ordenar lexicograficamente
-
---El resultado es 1037 NOP, atenti al distinct en el cod_autor del select!
-
+--¿Como hacer para chequear cada valor de la columna f.cod_funcion en la bolsa?
+--having max(f.cod_funcion) = 1 --cod_funcion 1 es el codigo de la funcion de autor
