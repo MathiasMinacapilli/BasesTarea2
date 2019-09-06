@@ -1,4 +1,4 @@
-﻿--Devolver ćodigo de obra de las obras de Argentina, 
+﻿--CONSULTA: Devolver ćodigo de obra de las obras de Argentina, 
 --que tienen un solo autor,
 --y que cumplen que todas las otras obras de su 
 --autor comparten al menos un tema con ella.

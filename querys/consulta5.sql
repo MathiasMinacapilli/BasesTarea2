@@ -1,4 +1,4 @@
-﻿--Devolver código y nombre de la editorial con mayor cantidad de obras que son una primera edicion.
+﻿--CONSULTA: Devolver código y nombre de la editorial con mayor cantidad de obras que son una primera edicion.
 
 --Agrupa por editorial y cuenta cuantas obras distintas hay en cada una, luego las ordena en forma descendente y se queda con la primera.
 
